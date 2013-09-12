@@ -84,7 +84,7 @@ define(function (require, exports, module) {
         var results = CSSLint.verify(text, ALL_RULES),
             messageObjs = results.messages,
             errors = messageObjs.map(function (messageObj) {
-                var position = { line: messageObj.line - 1, ch: messageObj.col },
+                var position = { line: messageObj.line - 1, ch: messageObj.col - 1 },
                     message = messageObj.message,
                     type;
                 

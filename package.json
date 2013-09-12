@@ -2,12 +2,15 @@
     "name": "brackets-csslint",
     "title": "CSSLint for Brackets",
     "description": "CSSLint extension for Brackets",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author" : "Ian Wehrman <ian@wehrman.org>",
     "homepage": "https://github.com/iwehrman/brackets-csslint/",
     "bugs": "https://github.com/iwehrman/brackets-csslint/issues",
     "repository" : { 
         "type" : "git",
          "url" : "https://github.com/iwehrman/brackets-csslint.git"
-    }
+    },
+    "engines": {
+		"brackets": ">=0.31.0"
+	}
 }

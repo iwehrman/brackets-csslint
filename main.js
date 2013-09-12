@@ -35,8 +35,8 @@ define(function (require, exports, module) {
     require("thirdparty/csslint/release/csslint");
     
     // Load dependent modules
-    var CodeInspection     = brackets.getModule("language/CodeInspection"),
-        Strings            = brackets.getModule("strings");
+    var AppInit         = brackets.getModule("utils/AppInit"),
+        CodeInspection  = brackets.getModule("language/CodeInspection");
     
     var ALL_RULES = [
         "ids",
@@ -77,7 +77,7 @@ define(function (require, exports, module) {
     ];
     
     /**
-     * Run csslint on the current document. Reports results to the main UI. Displays
+     * Run CSSLint on the current document. Reports results to the main UI. Displays
      * a gold star when no errors are found.
      */
     function lintOneFile(text, fullPath) {
@@ -109,10 +109,11 @@ define(function (require, exports, module) {
         return { errors: errors };
     }
     
-    
-    // Register for JS files
-    CodeInspection.register("css", {
-        name: "csslint",
-        scanFile: lintOneFile
+    AppInit.appReady(function () {
+        // Register for CSS files
+        CodeInspection.register("css", {
+            name: "CSSLint",
+            scanFile: lintOneFile
+        });
     });
 });

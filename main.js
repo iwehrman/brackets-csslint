@@ -88,7 +88,7 @@ define(function (require, exports, module) {
                     message = messageObj.message,
                     type;
                 
-                switch (messageObjs.type) {
+                switch (messageObj.type) {
                 case "error":
                     type = CodeInspection.Type.ERROR;
                     break;

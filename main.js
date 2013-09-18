@@ -32,7 +32,7 @@ define(function (require, exports, module) {
     "use strict";
     
     // Load CSSLint, a non-module lib
-    require("thirdparty/csslint/release/csslint");
+    require("thirdparty/csslint");
     
     // Load dependent modules
     var AppInit         = brackets.getModule("utils/AppInit"),

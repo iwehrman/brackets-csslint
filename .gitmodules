@@ -1,3 +1,0 @@
-[submodule "thirdparty/csslint"]
-	path = thirdparty/csslint
-	url = https://github.com/stubbornella/csslint.git
